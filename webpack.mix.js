@@ -11,5 +11,18 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+//mix.js('resources/assets/js/app.js', 'public/js').version();
+//mix.sass('resources/assets/sass/app.scss', 'public/css').version();
+   
+   
+
+//RUN VERSIONING ON PRODUCTION ONLY
+/*if (mix.config.inProduction) {
+    mix.version();
+	
+	//disable OS notification modalls
+	mix.disableNotifications();
+	
+	//monitor all files for automatic versioning on changes
+	mix.browserSync('http://localhost/LaravelVueBlog/public/');
+}*/

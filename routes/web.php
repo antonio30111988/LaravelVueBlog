@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [
-	'as'=>'admin.dashboard',
-	'uses'=>'HomeController@index'
-]); 
+Route::group(['namespace'=>'Admin'],function(){
+	Route::get('/dashboard', [
+		'as'=>'admin.dashboard',
+		'uses'=>'DashboardController@index'
+	]); 
+});
+
+
